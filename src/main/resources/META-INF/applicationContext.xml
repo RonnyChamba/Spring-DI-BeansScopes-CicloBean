@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        	">
+	<!-- Bean direccion -->
+	<bean id="miDireccion" class="com.curso.spring.Direccion">
+		
+		<property name="numeroCasa"     value="23"/>
+		<property name="callePrincipal" value="La Lorena y Pasaje"/>
+		
+	</bean>
+	<!-- Bean Profesion -->
+	<bean id ="miProfesion" class="com.curso.spring.ProfesionPoliciaImpl"/>
+			
+	<!-- Bean Persona -->
+	<bean id="miPersona" class="com.curso.spring.Persona" >
+
+		<constructor-arg index="2" ref="miProfesion"/>
+		<constructor-arg index="0"  value="25"/>
+		<constructor-arg  index="1" ref="miDireccion"/>
+		
+		<property name="sueldo" value="400"/>
+		<property name="casado" value="true"/>
+		
+		<property name="telefonos">
+			<list>
+				<value>0981805434</value>
+				<value>0984356343</value>
+				<value>0978653535</value>
+			</list>
+		</property>	
+	</bean>
+</beans>
