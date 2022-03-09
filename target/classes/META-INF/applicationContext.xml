@@ -7,7 +7,7 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd
         	">
 	<!-- Bean direccion -->
-	<bean id="miDireccion" class="com.curso.spring.Direccion">
+	<bean id="miDireccion" class="com.curso.spring.Direccion" scope="prototype">
 		
 		<property name="numeroCasa"     value="23"/>
 		<property name="callePrincipal" value="La Lorena y Pasaje"/>
