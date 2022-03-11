@@ -2,6 +2,9 @@ package com.curso.spring;
 
 import java.util.List;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 public class Persona {
 
 	private int edad;
@@ -63,5 +66,16 @@ public class Persona {
 		System.out.println(this.toString());
 		System.out.println(direccion.toString());
 		profesion.tipo();
+	}
+	@PostConstruct
+	public void init() {
+		
+		System.out.println("Inicializando Persona con  @PostConstruct");
+		
+	}
+	@PreDestroy
+	public void destroy() {
+		
+		System.out.println("Liberando recurso de Persona con @PreDestroy");
 	}
 }

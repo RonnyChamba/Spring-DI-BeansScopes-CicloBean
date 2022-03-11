@@ -29,4 +29,13 @@ public class Direccion {
 	public String toString() {
 		return "Direccion [callePrincipal=" + callePrincipal + ", numeroCasa=" + numeroCasa + "]";
 	}
+	
+	public void init() {
+		 System.out.println("Inicialización mediante  método propio");
+	}
+	
+public void destroy() {
+	 System.out.println("Bean destruido  método propio");
+		
+	}
 }
